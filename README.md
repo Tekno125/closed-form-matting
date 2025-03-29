@@ -87,7 +87,7 @@ Note. The computed laplacian is slightly different due to array ordering in nump
 `ravelImg = img.reshape(h*w, d)`
 to
 `indsM = np.arange(h*w).reshape((h, w), order='F')`
-`ravelImg = img.reshape(h*w, d, , order='F')`.
+`ravelImg = img.reshape(h*w, d, order='F')`.
 Again note that this will result in incorrect alpha if the `D_s, b_s` orderings are not also changed to `order='F'F`. -->
 
 For more information see the original paper  http://www.wisdom.weizmann.ac.il/~levina/papers/Matting-Levin-Lischinski-Weiss-CVPR06.pdf
