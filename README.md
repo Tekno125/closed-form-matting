@@ -80,7 +80,7 @@ foreground, background = solve_foreground_background(image, alpha)
 
 
 ## More Information
-The computation is generally faster than the matlab version thanks to more vectorization.
+<!-- The computation is generally faster than the matlab version thanks to more vectorization.
 Note. The computed laplacian is slightly different due to array ordering in numpy being different than in matlab. To get same laplacian as in matlab change,
 
 `indsM = np.arange(h*w).reshape((h, w))`
@@ -88,7 +88,7 @@ Note. The computed laplacian is slightly different due to array ordering in nump
 to
 `indsM = np.arange(h*w).reshape((h, w), order='F')`
 `ravelImg = img.reshape(h*w, d, , order='F')`.
-Again note that this will result in incorrect alpha if the `D_s, b_s` orderings are not also changed to `order='F'F`.
+Again note that this will result in incorrect alpha if the `D_s, b_s` orderings are not also changed to `order='F'F`. -->
 
 For more information see the original paper  http://www.wisdom.weizmann.ac.il/~levina/papers/Matting-Levin-Lischinski-Weiss-CVPR06.pdf
 The original matlab code is here http://www.wisdom.weizmann.ac.il/~levina/matting.tar.gz
