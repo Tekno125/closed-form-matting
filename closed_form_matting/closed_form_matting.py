@@ -73,8 +73,8 @@ def compute_laplacian(img: np.ndarray, mask=None, eps: float =10**(-7), win_rad:
     c_h, c_w = h - 2 * win_rad, w - 2 * win_rad
     win_diam = win_rad * 2 + 1
 
-    indsM = np.arange(h * w).reshape((h, w))
-    ravelImg = img.reshape(h * w, d)
+    indsM = np.arange(h*w).reshape((h, w), order='F')
+    ravelImg = img.reshape(h*w, d, , order='F')
     win_inds = _rolling_block(indsM, block=(win_diam, win_diam))
 
     win_inds = win_inds.reshape(c_h, c_w, win_size)
